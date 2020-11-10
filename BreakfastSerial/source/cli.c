@@ -67,9 +67,17 @@ static void unrecognized(const char* cmd){
 	printf("Unknown Command: %s\r\n", cmd);
 }
 
+
+static void help(const char* cmd){
+	printf("Command: Author ; Arguments: None ; Description: Prints a string with your name.\r\n");
+	printf("Command: Dump ; Arguments: Start, Len ; Description: Prints a hexdump of the memory requested \r\n");
+	printf("Command: Help ; Arguments: None ; Description: Prints all commands available.\r\n");
+}
+
 static const cmd_lookup_t cmds[] = {
 		{"author", auth},
 		{"dump", dumpHexDump},
+		{"help", help},
 		{"", unrecognized}
 };
 

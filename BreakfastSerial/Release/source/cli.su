@@ -1,0 +1,5 @@
+cli.c:71:13:help	8	static
+cli.c:34:13:auth	8	static
+cli.c:66:13:unrecognized	8	static
+cli.c:48:13:dumpHexDump	16	static
+cli.c:95:6:segment_cmd	2104	static

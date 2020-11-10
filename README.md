@@ -67,8 +67,12 @@ Developed using MCUExpresso on Linux. <br />
 
 ## Images of the OUTPUT on terminal 
 
-- Terminal Output 
+- Terminal Output <br />
 ![picture](Images/Interactive_Terminal_Session.png)
 
-- UART Setup
+- UART Setup <br />
 ![picture](Images/Terminal_Parameters.png)
+
+## Extra Credit 
+- Backspace Functionality is implemented
+- Help Functionality is implemented 

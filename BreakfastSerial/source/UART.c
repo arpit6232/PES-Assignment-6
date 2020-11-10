@@ -202,10 +202,17 @@ static void manage() {
 		while (Q_Size(&RxQ) == 0)
 			;
 		Q_Dequeue(&RxQ, &c, 1);
-		if (c != 0x0D || c != 0x0A) {
-			*xb = (char)c;
-			xb++;
-			*xb = '\0';
+		 if (c != 0x0D || c != 0x0A) {
+			if(c != 0x08) {
+				*xb = (char)c;
+				xb++;
+				*xb = '\0';
+				}
+			else {
+
+				xb--;
+				*xb = '\0';
+			}
 		}
 		sprintf((char *) buffer, "%c", c);
 		bp = buffer;

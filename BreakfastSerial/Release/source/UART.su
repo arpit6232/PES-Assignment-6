@@ -1,0 +1,8 @@
+UART.c:196:13:manage	752	static
+libconfig-arm.h:247:5:__sys_write	24	static
+libconfig-arm.h:241:5:__sys_readc	16	static
+UART.c:51:6:Init_UART0	24	static
+UART.c:117:6:Send_String	8	static
+UART.c:136:8:Receive_String	8	static
+UART.c:161:6:UART0_IRQHandler	24	static
+UART.c:244:6:application_mode	40	static

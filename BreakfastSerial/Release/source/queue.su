@@ -1,0 +1,8 @@
+queue.c:26:6:Q_Init	0	static
+queue.c:45:8:Q_Capacity	0	static
+queue.c:58:6:Q_Empty	0	static
+queue.c:72:5:Q_Size	0	static
+queue.c:102:8:Q_Length	0	static
+queue.c:87:6:Q_Full	8	static
+queue.c:136:8:Q_Enqueue	40	static
+queue.c:215:8:Q_Dequeue	32	static
