@@ -197,31 +197,23 @@ static void manage() {
 	char xbur[640];
 	char* xb = &xbur[0];
 
-	uint8_t buffer[80], c, * bp;
+	uint8_t c;
 	while(c != 0x0D) {
 		while (Q_Size(&RxQ) == 0)
 			;
 		Q_Dequeue(&RxQ, &c, 1);
+		putchar(c);
 		 if (c != 0x0D || c != 0x0A) {
 			if(c != 0x08) {
 				*xb = (char)c;
 				xb++;
-				*xb = '\0';
+//				*xb = '\0';
 				}
 			else {
-
+				printf(" \b");
 				xb--;
-				*xb = '\0';
+//				*xb = '\0';
 			}
-		}
-		sprintf((char *) buffer, "%c", c);
-		bp = buffer;
-		while (*bp != '\0') {
-					// copy characters up to null terminator
-			while (Q_Full(&TxQ))
-				; // wait for space to open up
-			Q_Enqueue(&TxQ, bp, 1);
-			bp++;
 		}
 		// start transmitter if it isn't already running
 		if (!(UART0->C2 & UART0_C2_TIE_MASK)) {
@@ -234,6 +226,7 @@ static void manage() {
 		}
 
 	}
+	*xb = '\0';
 
 	segment_cmd(xbur);
 	xb = &xbur[0];

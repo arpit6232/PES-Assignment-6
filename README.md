@@ -76,3 +76,4 @@ Developed using MCUExpresso on Linux. <br />
 ## Extra Credit 
 - Backspace Functionality is implemented
 - Help Functionality is implemented 
+- Implemented Build Data Print Functionality

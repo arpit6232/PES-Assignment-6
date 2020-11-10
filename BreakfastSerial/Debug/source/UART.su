@@ -8,5 +8,5 @@ UART.c:117:6:Send_String	16	static
 UART.c:136:8:Receive_String	16	static
 UART.c:149:13:clearUARTErrors	8	static
 UART.c:161:6:UART0_IRQHandler	16	static
-UART.c:196:13:manage	752	static
-UART.c:251:6:application_mode	48	static
+UART.c:196:13:manage	664	static
+UART.c:244:6:application_mode	48	static

@@ -68,16 +68,41 @@ static void unrecognized(const char* cmd){
 }
 
 
+/*
+ * Prints All the commands Available
+ *
+ * Parameters:
+ *   str : String to Parse
+ *
+ * Returns:
+ *   void
+ */
 static void help(const char* cmd){
-	printf("Command: Author ; Arguments: None ; Description: Prints a string with your name.\r\n");
-	printf("Command: Dump ; Arguments: Start, Len ; Description: Prints a hexdump of the memory requested \r\n");
-	printf("Command: Help ; Arguments: None ; Description: Prints all commands available.\r\n");
+	printf("Command: Author ; Arguments: <> ; Description: Prints a string with your name.\r\n");
+	printf("Command: Dump ; Arguments: <Start>, <Len> ; Description: Prints a hexdump of the memory requested \r\n");
+	printf("Command: Info ; Arguments: <> ; Description: Prints Build Information.\r\n");
+}
+
+
+/*
+ * Prints Build Information
+ *
+ * Parameters:
+ *   str : String to Parse
+ *
+ * Returns:
+ *   void
+ */
+static void info(const char* cmd){
+	printf("Version %s built on %s at %s \r\n", VERSION_TAG, BUILD_MACHINE, BUILD_DATE);
+	printf("Commit: %s \r\n", GIT_LOG);
 }
 
 static const cmd_lookup_t cmds[] = {
 		{"author", auth},
 		{"dump", dumpHexDump},
 		{"help", help},
+		{"info", info},
 		{"", unrecognized}
 };
 
