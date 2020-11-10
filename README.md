@@ -68,7 +68,7 @@ Developed using MCUExpresso on Linux. <br />
 ## Images of the OUTPUT on terminal 
 
 - Terminal Output <br />
-![picture](Images/Interactive_Terminal_Session.png)
+![picture](Images/Interactive_Terminal_Session_.png)
 
 - UART Setup <br />
 ![picture](Images/Terminal_Parameters.png)
